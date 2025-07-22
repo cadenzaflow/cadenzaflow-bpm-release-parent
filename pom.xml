@@ -3,20 +3,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.camunda</groupId>
-    <artifactId>camunda-release-parent</artifactId>
-    <version>3.7.2</version>
+    <groupId>org.cadenzaflow</groupId>
+    <artifactId>cadenzaflow-release-parent</artifactId>
+    <version>1.0.0</version>
     <!-- do not remove empty tag - http://jira.codehaus.org/browse/MNG-4687 -->
     <relativePath />
   </parent>
 
-  <artifactId>camunda-bpm-release-parent</artifactId>
-  <version>2.3.0</version>
+  <artifactId>cadenzaflow-bpm-release-parent</artifactId>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>Camunda Platform - Release Parent Pom</name>
+  <name>CadenzaFlow Platform - Release Parent Pom</name>
 
   <description>
-    This pom defines the required plugins and profiles to allow a Camunda Platform release build.
+    This pom defines the required plugins and profiles to allow a CadenzaFlow Platform release build.
   </description>
 
   <properties>
@@ -34,10 +34,10 @@
     <plugin.version.maven-bundle>4.1.0</plugin.version.maven-bundle>
 
     <license.inlineHeader>
-Copyright Camunda Services GmbH and/or licensed to Camunda Services GmbH
+Copyright CadenzaFlow Services GmbH and/or licensed to CadenzaFlow Services GmbH
 under one or more contributor license agreements. See the NOTICE file
 distributed with this work for additional information regarding copyright
-ownership. Camunda licenses this file to you under the Apache License,
+ownership. CadenzaFlow licenses this file to you under the Apache License,
 Version 2.0; you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
@@ -138,7 +138,7 @@ limitations under the License.</license.inlineHeader>
     
     <!-- Plugins used in the context of creating a license book. -->
     <!-- If activated (see properties), these plugins create a list of 
-      non-Camunda dependencies and attach it as an artifact to the build.
+      non-CadenzaFlow dependencies and attach it as an artifact to the build.
       The license book generator uses these files to create the book. -->
     <plugins>
       <plugin>
@@ -156,7 +156,7 @@ limitations under the License.</license.inlineHeader>
               <skip>${skip-third-party-bom}</skip>
               <includeScope>test</includeScope><!-- Gives all dependencies; scopes filtering is applied in the ant step -->
               <sort>true</sort>
-              <excludeGroupIds>org.camunda</excludeGroupIds>
+              <excludeGroupIds>org.cadenzaflow</excludeGroupIds>
               <outputFile>${project.build.directory}/dependencies/dependencies-generated.txt</outputFile>
             </configuration>
           </execution>
@@ -237,20 +237,20 @@ limitations under the License.</license.inlineHeader>
   </licenses>
 
   <organization>
-    <name>Camunda Services GmbH</name>
-    <url>http://www.camunda.com</url>
+    <name>CadenzaFlow Services GmbH</name>
+    <url>http://www.cadenzaflow.com</url>
   </organization>
 
   <scm>
-    <url>https://github.com/camunda/camunda-bpm-release-parent</url>
-    <connection>scm:git:git@github.com:camunda/camunda-bpm-release-parent.git</connection>
-    <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-release-parent.git</developerConnection>
-    <tag>2.3.0</tag>
+    <url>https://github.com/cadenzaflow/cadenzaflow-bpm-release-parent</url>
+    <connection>scm:git:git@github.com:cadenzaflow/cadenzaflow-bpm-release-parent.git</connection>
+    <developerConnection>scm:git:git@github.com:cadenzaflow/cadenzaflow-bpm-release-parent.git</developerConnection>
+    <tag>1.0.0</tag>
   </scm>
 
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/camunda/camunda-bpm-platform/issues</url>
+    <url>https://github.com/cadenzaflow/cadenzaflow-bpm-platform/issues</url>
   </issueManagement>
 
   <repositories>
@@ -263,9 +263,9 @@ limitations under the License.</license.inlineHeader>
       </snapshots>
     </repository>
     <repository>
-      <id>camunda-nexus</id>
-      <name>Camunda Nexus</name>
-      <url>https://artifacts.camunda.com/artifactory/internal</url>
+      <id>cadenzaflow-nexus</id>
+      <name>cadenzaflow Nexus</name>
+      <url>http://18.157.182.187:32265/repository/internal</url>
     </repository>
   </repositories>
 
