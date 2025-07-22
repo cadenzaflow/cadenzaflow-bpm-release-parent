@@ -2,14 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
+  <!-- Parent POM geçici olarak kaldırıldı - mirror sorunu çözülene kadar -->
+  <!-- <parent>
     <groupId>org.cadenzaflow</groupId>
     <artifactId>cadenzaflow-release-parent</artifactId>
     <version>1.0.0</version>
-    <!-- do not remove empty tag - http://jira.codehaus.org/browse/MNG-4687 -->
     <relativePath />
-  </parent>
+  </parent> -->
 
+  <groupId>org.cadenzaflow</groupId>
   <artifactId>cadenzaflow-bpm-release-parent</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
@@ -263,10 +264,31 @@ limitations under the License.</license.inlineHeader>
       </snapshots>
     </repository>
     <repository>
+      <id>cadenzaflow-release</id>
+      <name>CadenzaFlow Release Repository</name>
+      <url>http://18.157.182.187:32265/repository/cadenzaflow-release</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
       <id>cadenzaflow-nexus</id>
       <name>cadenzaflow Nexus</name>
       <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>cadenzaflow-nexus</id>
+      <name>CadenzaFlow Release Repository</name>
+      <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
+    </repository>
+    <snapshotRepository>
+      <id>cadenzaflow-nexus</id>
+      <name>CadenzaFlow Snapshot Repository</name>
+      <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
+    </snapshotRepository>
+  </distributionManagement>
 
 </project>
