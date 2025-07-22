@@ -265,7 +265,7 @@ limitations under the License.</license.inlineHeader>
     <repository>
       <id>cadenzaflow-nexus</id>
       <name>cadenzaflow Nexus</name>
-      <url>http://18.157.182.187:32265/repository/internal</url>
+      <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
     </repository>
   </repositories>
 
