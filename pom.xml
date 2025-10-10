@@ -105,10 +105,13 @@ limitations under the License.</license.inlineHeader>
           </executions>
         </plugin>
         <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>0.4.0</version>
           <configuration>
             <stagingProgressTimeoutMinutes>60</stagingProgressTimeoutMinutes>
+            <publishingServerId>central</publishingServerId>
+            <tokenAuth>true</tokenAuth>
           </configuration>
         </plugin>
         <!-- third party license handling -->
