@@ -268,7 +268,7 @@ limitations under the License.</license.inlineHeader>
     <repository>
       <id>cadenzaflow-release</id>
       <name>CadenzaFlow Release Repository</name>
-      <url>http://18.157.182.187:32265/repository/cadenzaflow-release</url>
+      <url>https://nexus.cadenzaflow.com/repository/cadenzaflow-release</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -276,7 +276,7 @@ limitations under the License.</license.inlineHeader>
     <repository>
       <id>cadenzaflow-nexus</id>
       <name>cadenzaflow Nexus</name>
-      <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
+      <url>https://nexus.cadenzaflow.com/repository/cadenzaflow-nexus</url>
     </repository>
   </repositories>
 
@@ -284,12 +284,12 @@ limitations under the License.</license.inlineHeader>
     <repository>
       <id>cadenzaflow-nexus</id>
       <name>CadenzaFlow Release Repository</name>
-      <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
+      <url>https://nexus.cadenzaflow.com/repository/cadenzaflow-nexus</url>
     </repository>
     <snapshotRepository>
       <id>cadenzaflow-nexus</id>
       <name>CadenzaFlow Snapshot Repository</name>
-      <url>http://18.157.182.187:32265/repository/cadenzaflow-nexus</url>
+      <url>https://nexus.cadenzaflow.com/repository/cadenzaflow-nexus</url>
     </snapshotRepository>
   </distributionManagement>
 
