@@ -11,7 +11,7 @@
 
   <groupId>org.cadenzaflow</groupId>
   <artifactId>cadenzaflow-bpm-release-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>pom</packaging>
   <name>CadenzaFlow Platform - Release Parent Pom</name>
 
@@ -255,30 +255,6 @@ limitations under the License.</license.inlineHeader>
     <system>GitHub Issues</system>
     <url>https://github.com/cadenzaflow/cadenzaflow-bpm-platform/issues</url>
   </issueManagement>
-
-  <repositories>
-    <repository>
-      <id>maven-central</id>
-      <name>Maven Central</name>
-      <url>https://repo1.maven.org/maven2</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>cadenzaflow-release</id>
-      <name>CadenzaFlow Release Repository</name>
-      <url>https://nexus.cadenzaflow.com/repository/cadenzaflow-release</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>cadenzaflow-nexus</id>
-      <name>cadenzaflow Nexus</name>
-      <url>https://nexus.cadenzaflow.com/repository/cadenzaflow-nexus</url>
-    </repository>
-  </repositories>
 
   <distributionManagement>
     <repository>
