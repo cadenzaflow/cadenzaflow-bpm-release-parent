@@ -11,7 +11,7 @@
 
   <groupId>org.cadenzaflow</groupId>
   <artifactId>cadenzaflow-bpm-release-parent</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>pom</packaging>
   <name>CadenzaFlow Platform - Release Parent Pom</name>
 
@@ -107,11 +107,9 @@ limitations under the License.</license.inlineHeader>
         <plugin>
           <groupId>org.sonatype.central</groupId>
           <artifactId>central-publishing-maven-plugin</artifactId>
-          <version>0.4.0</version>
+          <version>0.8.0</version>
           <configuration>
-            <stagingProgressTimeoutMinutes>60</stagingProgressTimeoutMinutes>
             <publishingServerId>central</publishingServerId>
-            <tokenAuth>true</tokenAuth>
           </configuration>
         </plugin>
         <!-- third party license handling -->
@@ -231,6 +229,35 @@ limitations under the License.</license.inlineHeader>
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <!--
+        The parent of this POM has a profile with this id: it signs the artifacts and
+        uploads them to Maven Central, with version 0.4.0 of the publishing plugin. That
+        version fails when it reads the state of an upload, after the upload itself. The
+        version is set here, where it has precedence.
+      -->
+      <id>sonatype-oss-release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>0.8.0</version>
+            <extensions>true</extensions>
+            <!-- replaces the configuration of the parent: 0.8.0 does not know its tokenAuth -->
+            <configuration combine.self="override">
+              <publishingServerId>central</publishingServerId>
+              <!-- an upload is validated and then waits: a person publishes it in the Central Portal -->
+              <autoPublish>false</autoPublish>
+              <waitUntil>validated</waitUntil>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
   <licenses>
     <license>
